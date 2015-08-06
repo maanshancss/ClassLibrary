@@ -1,0 +1,15 @@
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.AgileProgressBar.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.CaptureScreenForm.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.EnumComboBox.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.ExListView.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.FaceEmotionBoard.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.ColorChooser.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.RichTimerConfigure.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.Thumbnail.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.Widget.ThumbnailListBox.resources
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.csproj.GenerateResource.Cache
+D:\GitHubTest\ClassLibrary\ESBasic\bin\Debug\ESBasic.dll
+D:\GitHubTest\ClassLibrary\ESBasic\bin\Debug\ESBasic.pdb
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.dll
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.pdb
+D:\GitHubTest\ClassLibrary\ESBasic\obj\Debug\ESBasic.csprojResolveAssemblyReference.cache

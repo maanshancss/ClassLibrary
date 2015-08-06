@@ -1,0 +1,9 @@
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\log4net.dll
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\WHC.OrderWater.Commons.dll
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\WHC.OrderWater.Commons.xml
+D:\GitHubTest\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\GitHubTest\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\GitHubTest\ClassLibrary\ClassLibrary\bin\Debug\Newtonsoft.Json.dll
+D:\GitHubTest\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

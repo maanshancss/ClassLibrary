@@ -1,0 +1,5 @@
+D:\GitHubTest\ClassLibrary\MyUtility\bin\Debug\MyUtility.dll
+D:\GitHubTest\ClassLibrary\MyUtility\bin\Debug\MyUtility.pdb
+D:\GitHubTest\ClassLibrary\MyUtility\obj\Debug\MyUtility.dll
+D:\GitHubTest\ClassLibrary\MyUtility\obj\Debug\MyUtility.pdb
+D:\GitHubTest\ClassLibrary\MyUtility\obj\Debug\MyUtility.csprojResolveAssemblyReference.cache

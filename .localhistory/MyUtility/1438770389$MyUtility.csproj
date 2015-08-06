@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{056230EA-49E7-4E04-8CE7-3B7EE3DA5AD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyUtility</RootNamespace>
+    <AssemblyName>MyUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseValidate.cs" />
+    <Compile Include="Base\DateCalculater.cs" />
+    <Compile Include="Base\DateTime\MyDateTime.cs" />
+    <Compile Include="Base\DateTime\MyTypeConvert.cs" />
+    <Compile Include="Base\String\StrCoding.cs" />
+    <Compile Include="Base\String\StringOper.cs" />
+    <Compile Include="Base\String\StringOther.cs" />
+    <Compile Include="BS\BaseOp.cs" />
+    <Compile Include="BS\BaseValidate.cs" />
+    <Compile Include="BS\Directory\DirectoryOper.cs" />
+    <Compile Include="BS\File\FileOper.cs" />
+    <Compile Include="BS\Image\ImageOp.cs" />
+    <Compile Include="BS\Image\OWCChart11.cs" />
+    <Compile Include="BS\JavaScript\CompressPack\ECMAScriptPacker.cs" />
+    <Compile Include="BS\JavaScript\CompressPack\ParseMaster.cs" />
+    <Compile Include="BS\WebObject.cs" />
+    <Compile Include="BS\WebScript.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CS\MyRequest.cs" />
+    <Compile Include="CS\Register.cs" />
+    <Compile Include="DataBase\Access\DbHelperOleDb.cs" />
+    <Compile Include="DataBase\CommandInfo.cs" />
+    <Compile Include="DataBase\MySql\DbHelperMySQL.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\CharSetMap.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\command.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\CommandBuilder.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\Cache.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\ContextString.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\NamedPipeStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\NativeMethods.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\Platform.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\SHA1.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\SharedMemoryStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\SocketStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\SqlTokenizer.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\StreamCreator.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\common\Version.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\CompressedStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Connection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBase\MySql\MySqlDriver\Crypt.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\dataadapter.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\datareader.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Driver.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Exception.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Field.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Installer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataBase\MySql\MySqlDriver\ISSchemaProvider.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Logger.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlClientFactory.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlConnectionStringBuilder.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MysqlDefs.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlError.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlHelper.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlPool.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlPoolManager.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlPromotableTransaction.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\MySqlStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\NativeDriver.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\parameter.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\parameter_collection.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\PerformanceMonitor.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\PreparableStatement.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\ProcedureCache.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Resources.Designer.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\SchemaProvider.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Statement.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\StoredProcedure.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\transaction.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MetaData.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlBinary.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlBit.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlByte.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlConversionException.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlDateTime.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlDecimal.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlDouble.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlInt16.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlInt32.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlInt64.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlSingle.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlString.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlTime.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlUByte.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlUInt16.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlUInt32.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlUInt64.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\Types\MySqlValue.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\UsageAdvisor.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\Adler32.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\Deflate.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\InfBlocks.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\InfCodes.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\Inflate.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\InfTree.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\StaticTree.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\SupportClass.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\Tree.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\ZInputStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\Zlib.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\ZOutputStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\ZStream.cs" />
+    <Compile Include="DataBase\MySql\MySqlDriver\zlib\ZStreamException.cs" />
+    <Compile Include="DataBase\Oracle\DbHelperOra.cs" />
+    <Compile Include="DataBase\Oracle\OracleHelper.cs" />
+    <Compile Include="DataBase\PubConstant.cs" />
+    <Compile Include="DataBase\SQLServer\DbHelperSQL.cs" />
+    <Compile Include="DataBase\SQLServer\DbHelperSQLP.cs" />
+    <Compile Include="DataBase\SQLServer\SQLDB.cs" />
+    <Compile Include="DataBase\SQLServer\SQLHelper.cs" />
+    <Compile Include="Document\MyExcel\EnumWriteType.cs" />
+    <Compile Include="Document\MyExcel\ExcelManager.cs" />
+    <Compile Include="Document\MyExcel\ExcelManagerFactory.cs" />
+    <Compile Include="Document\MyExcel\IExcelManager.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.BEG_FILE_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.CellAlignment.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.CellFont.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.CellHiddenLocked.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.COLWIDTH_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.DEF_ROWHEIGHT_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.END_FILE_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.FontFormatting.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.FONT_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.FORMAT_COUNT_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.FORMAT_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.HEADER_FOOTER_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.HPAGE_BREAK_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.MarginTypes.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.MARGIN_RECORD_LAYOUT.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.PASSWORD_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.PRINT_GRIDLINES_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.PROTECT_SPREADSHEET_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.ROW_HEIGHT_RECORD.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.SmartExcel.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.SmartExcelOpeartionFileException.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.tInteger.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.tNumber.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.tText.cs" />
+    <Compile Include="Document\MyExcel\las.foundation.SmartExcel\las.foundation.SmartExcel.ValueTypes.cs" />
+    <Compile Include="Document\MyPdf\PdfArea.cs" />
+    <Compile Include="Document\MyPdf\PdfDocument.cs" />
+    <Compile Include="Document\MyPdf\PdfDocumentFormat.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfCatalog.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfCircle.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfFlowTextArea.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfFont.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfHeader.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfImage.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfImageContent.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfLine.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfObject.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfPage.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfRectangle.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfRoot.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfTableStyle.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfTextArea.cs" />
+    <Compile Include="Document\MyPdf\PdfObjects\PdfTextBlock.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\BorderTypes.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfCell.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfCellRange.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfColumn.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfRow.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfTable.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\PdfTablePage.cs" />
+    <Compile Include="Document\MyPdf\Table Objects\TableStyle.cs" />
+    <Compile Include="Document\MyPdf\Utility.cs" />
+    <Compile Include="Files\AssemblyInfo.cs" />
+    <Compile Include="Files\SharpZipLib\BZip2\BZip2.cs" />
+    <Compile Include="Files\SharpZipLib\BZip2\BZip2Constants.cs" />
+    <Compile Include="Files\SharpZipLib\BZip2\BZip2Exception.cs" />
+    <Compile Include="Files\SharpZipLib\BZip2\BZip2InputStream.cs" />
+    <Compile Include="Files\SharpZipLib\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="Files\SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="Files\SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="Files\SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="Files\SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="Files\SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="Files\SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="Files\SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="Files\SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="Files\SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="Files\SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="Files\SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="Files\SharpZipLib\GZip\GZIPConstants.cs" />
+    <Compile Include="Files\SharpZipLib\GZip\GZipException.cs" />
+    <Compile Include="Files\SharpZipLib\GZip\GzipInputStream.cs" />
+    <Compile Include="Files\SharpZipLib\GZip\GzipOutputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Main.cs" />
+    <Compile Include="Files\SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\InvalidHeaderException.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarArchive.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarBuffer.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarEntry.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarException.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarHeader.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarInputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Tar\TarOutputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="Files\SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Files\ZIPPER.cs" />
+    <Compile Include="Other\VSProject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="security\MyAES.cs" />
+    <Compile Include="security\MyDES.cs" />
+    <Compile Include="security\MyMD5.cs" />
+    <Compile Include="security\SQLInjectSecurity.cs" />
+    <Compile Include="security\SymmetricMethod.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Base\DateTime\vssver2.scc" />
+    <None Include="Base\String\vssver2.scc" />
+    <None Include="Base\vssver2.scc" />
+    <None Include="BS\Directory\vssver2.scc" />
+    <None Include="BS\File\vssver2.scc" />
+    <None Include="BS\Image\vssver2.scc" />
+    <None Include="Document\MyPdf\Demo\Gios Pdf.NET library.rar" />
+    <None Include="security\vssver2.scc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataBase\MySql\MySqlDriver\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlCommand.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlCommandBuilder.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlConnection.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlDataAdapter.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlDataReader.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlException.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlHelper.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlParameter.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlParameterCollection.xml" />
+    <Content Include="DataBase\MySql\MySqlDriver\docs\MySqlTransaction.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Document\MyWord\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

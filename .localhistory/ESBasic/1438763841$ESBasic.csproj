@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0905058F-A55A-4827-98A8-9D2CC5912244}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESBasic</RootNamespace>
+    <AssemblyName>ESBasic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addins\AddinManager.cs" />
+    <Compile Include="Addins\AddinUtil.cs" />
+    <Compile Include="Addins\IAddin.cs" />
+    <Compile Include="Addins\IAddinManager.cs" />
+    <Compile Include="Base\ByteConverter.cs" />
+    <Compile Include="Base\CommonJsonModel.cs" />
+    <Compile Include="Base\DataBuffer.cs" />
+    <Compile Include="Base\Delegates.cs" />
+    <Compile Include="Base\Demisemiquaver.cs" />
+    <Compile Include="Base\EnumDescription.cs" />
+    <Compile Include="Base\IUrgentExceptionReporter.cs" />
+    <Compile Include="Base\MapItem.cs" />
+    <Compile Include="Base\RemotingServiceAddress.cs" />
+    <Compile Include="Base\Time\Date.cs" />
+    <Compile Include="Base\Time\DateScope.cs" />
+    <Compile Include="Base\Time\DateTimeScope.cs" />
+    <Compile Include="Base\Time\ShortTime.cs" />
+    <Compile Include="Base\Time\ShortTimeScope.cs" />
+    <Compile Include="Base\Time\Week.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Collections\CollectionConverter.cs" />
+    <Compile Include="Collections\CollectionHelper.cs" />
+    <Compile Include="Collections\DictionaryHelper.cs" />
+    <Compile Include="Collections\DispersiveKeyScope.cs" />
+    <Compile Include="Collections\KeyScope.cs" />
+    <Compile Include="Collections\SortedArray.cs" />
+    <Compile Include="Emit\AgileCreator.cs" />
+    <Compile Include="Emit\DynamicBridge\DynamicEventBridgeEmitter.cs" />
+    <Compile Include="Emit\DynamicBridge\DynamicEventBridgeFactory.cs" />
+    <Compile Include="Emit\DynamicBridge\IEventBridge.cs" />
+    <Compile Include="Emit\DynamicDispatcher\DynamicDispatcherEmitter.cs" />
+    <Compile Include="Emit\DynamicDispatcher\DynamicDispatcherFactory.cs" />
+    <Compile Include="Emit\DynamicProxy\DynamicProxyFactory.cs" />
+    <Compile Include="Emit\DynamicProxy\EfficientAopProxyEmitter.cs" />
+    <Compile Include="Emit\DynamicProxy\IAopInterceptor.cs" />
+    <Compile Include="Emit\DynamicProxy\IArounder.cs" />
+    <Compile Include="Emit\DynamicProxy\InterceptedMethod.cs" />
+    <Compile Include="Emit\DynamicProxy\Interceptors\EmptyInterceptor.cs" />
+    <Compile Include="Emit\DynamicProxy\Interceptors\ExceptionInterceptor.cs" />
+    <Compile Include="Emit\DynamicProxy\Interceptors\MethodTimeInterceptor.cs" />
+    <Compile Include="Emit\EmitHelper.cs" />
+    <Compile Include="Emit\ForEntity\DynamicEntity\DynamicEntityEmitter.cs" />
+    <Compile Include="Emit\ForEntity\DynamicObjectClassifier\DynamicObjectClassifierEmitter.cs" />
+    <Compile Include="Emit\ForEntity\DynamicObjectClassifier\DynamicObjectClassifierFactory.cs" />
+    <Compile Include="Emit\ForEntity\DynamicObjectClassifier\IObjectClassifier.cs" />
+    <Compile Include="Emit\ForEntity\DynamicObjectClassifier\IObjectContainer.cs" />
+    <Compile Include="Emit\ForEntity\DynamicPropertyQuicker\IPropertyQuicker.cs" />
+    <Compile Include="Emit\ForEntity\DynamicPropertyQuicker\PropertyQuickerEmitter.cs" />
+    <Compile Include="Emit\ForEntity\DynamicPropertyQuicker\PropertyQuickerFactory.cs" />
+    <Compile Include="Emit\Management\DynamicAssemblyManager.cs" />
+    <Compile Include="Helpers\ApplicationHelper.cs" />
+    <Compile Include="Helpers\Application\EventSafeTrigger.cs" />
+    <Compile Include="Helpers\Application\UISafeInvoker.cs" />
+    <Compile Include="Helpers\DraggerHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\EventHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\MachineHelper.cs" />
+    <Compile Include="Helpers\NullReferenceHelper.cs" />
+    <Compile Include="Helpers\PublicHelper.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Helpers\ScreenHelper.cs" />
+    <Compile Include="Helpers\SerializegHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\TimeHelper.cs" />
+    <Compile Include="Helpers\TypeHelper.cs" />
+    <Compile Include="Helpers\ValidationHelper.cs" />
+    <Compile Include="Helpers\WebServiceHelper.cs" />
+    <Compile Include="Helpers\WindowsHelper.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="Loggers\AgileLogger\ErrorLevel.cs" />
+    <Compile Include="Loggers\AgileLogger\FileAgileLogger.cs" />
+    <Compile Include="Loggers\AgileLogger\IAgileLogger.cs" />
+    <Compile Include="Loggers\ExceptionLogger\ExceptionFileLogger.cs" />
+    <Compile Include="Loggers\ExceptionLogger\IExceptionLogger.cs" />
+    <Compile Include="Loggers\Logger\FileLogger.cs" />
+    <Compile Include="Loggers\Logger\ILogger.cs" />
+    <Compile Include="Loggers\MethodTimeLogger\IMethodTimeLogger.cs" />
+    <Compile Include="Loggers\MethodTimeLogger\MethodTimeFileLogger.cs" />
+    <Compile Include="Loggers\SecurityLogger\ISecurityLogger.cs" />
+    <Compile Include="Loggers\SecurityLogger\SecurityFileLogger.cs" />
+    <Compile Include="Math\Arithmetic\AStar\AStarNode.cs" />
+    <Compile Include="Math\Arithmetic\AStar\AStarRoutePlanner.cs" />
+    <Compile Include="Math\Arithmetic\AStar\ICostGetter.cs" />
+    <Compile Include="Math\Arithmetic\AStar\RoutePlanData.cs" />
+    <Compile Include="Math\Arithmetic\CrossJoinContainer.cs" />
+    <Compile Include="Math\Arithmetic\FpsCounter.cs" />
+    <Compile Include="Math\Arithmetic\FuzzyMatchHelper.cs" />
+    <Compile Include="Math\Arithmetic\GenericKMP.cs" />
+    <Compile Include="Math\Arithmetic\ProbabilityDecider.cs" />
+    <Compile Include="Math\Arithmetic\Searching\BinarySearcher.cs" />
+    <Compile Include="Math\Arithmetic\SimpleCrossJoiner.cs" />
+    <Compile Include="Math\Arithmetic\Sorting\HeapSorter.cs" />
+    <Compile Include="Math\Arithmetic\Sorting\InsertionSorter.cs" />
+    <Compile Include="Math\Arithmetic\Sorting\MergeSorter.cs" />
+    <Compile Include="Math\Arithmetic\Sorting\QuickSorter.cs" />
+    <Compile Include="Math\Arithmetic\Sorting\SortHelper.cs" />
+    <Compile Include="Math\DataStructure\IPriorityManager.cs" />
+    <Compile Include="Math\DataStructure\PriorityManager.cs" />
+    <Compile Include="Math\Geometry\CompassDirections.cs" />
+    <Compile Include="Math\Geometry\GeometryHelper.cs" />
+    <Compile Include="Math\Geometry\LineSegment.cs" />
+    <Compile Include="Math\Geometry\Polygon.cs" />
+    <Compile Include="Math\Geometry\RotationAngles.cs" />
+    <Compile Include="Math\Geometry\Triangle.cs" />
+    <Compile Include="Math\Security\DesEncryption.cs" />
+    <Compile Include="Math\Security\SecurityHelper.cs" />
+    <Compile Include="Math\Security\ValidationCodeImageCreator.cs" />
+    <Compile Include="ObjectManagement\Basic\BeforehandCreator.cs" />
+    <Compile Include="ObjectManagement\Basic\Circle.cs" />
+    <Compile Include="ObjectManagement\Basic\CircleQueue.cs" />
+    <Compile Include="ObjectManagement\Basic\FixedQueue.cs" />
+    <Compile Include="ObjectManagement\Basic\LatestObjectCache.cs" />
+    <Compile Include="ObjectManagement\Basic\MinMaxContainer.cs" />
+    <Compile Include="ObjectManagement\Basic\TopNOrderedContainer.cs" />
+    <Compile Include="ObjectManagement\Basic\UniqueObjectList.cs" />
+    <Compile Include="ObjectManagement\Cache\BidirectionalMapping.cs" />
+    <Compile Include="ObjectManagement\Cache\CircleCache.cs" />
+    <Compile Include="ObjectManagement\Cache\Hiberarchy\HiberarchyAgileNodePicker.cs" />
+    <Compile Include="ObjectManagement\Cache\Hiberarchy\HiberarchyCache.cs" />
+    <Compile Include="ObjectManagement\Cache\Hiberarchy\IHiberarchyCache.cs" />
+    <Compile Include="ObjectManagement\Cache\Hiberarchy\IHiberarchyVal.cs" />
+    <Compile Include="ObjectManagement\Cache\Hot\HotCache.cs" />
+    <Compile Include="ObjectManagement\Cache\Hot\IHotCache.cs" />
+    <Compile Include="ObjectManagement\Cache\MultiDirectionalMapping.cs" />
+    <Compile Include="ObjectManagement\Cache\SmartDictionary\ISmartDictionaryCache.cs" />
+    <Compile Include="ObjectManagement\Cache\SmartDictionary\SmartDictionaryCache.cs" />
+    <Compile Include="ObjectManagement\Forms\FormManager.cs" />
+    <Compile Include="ObjectManagement\Increasing\Management\IRoundCache.cs" />
+    <Compile Include="ObjectManagement\Increasing\Management\IRoundCachePersister.cs" />
+    <Compile Include="ObjectManagement\Increasing\Management\IRoundIncreasingCache.cs" />
+    <Compile Include="ObjectManagement\Increasing\Management\RoundCacheManager.cs" />
+    <Compile Include="ObjectManagement\Increasing\Retriver\BasePhaseIncreaseAccesser.cs" />
+    <Compile Include="ObjectManagement\Increasing\Retriver\IIncreaseAutoRetriever.cs" />
+    <Compile Include="ObjectManagement\Increasing\Retriver\IncreaseAutoRetriever.cs" />
+    <Compile Include="ObjectManagement\Increasing\Retriver\IPhaseIncreaseAccesser.cs" />
+    <Compile Include="ObjectManagement\Increasing\Retriver\SingleSource.cs" />
+    <Compile Include="ObjectManagement\Integration\Combiner\Combiner.cs" />
+    <Compile Include="ObjectManagement\Integration\Combiner\ICombined.cs" />
+    <Compile Include="ObjectManagement\Integration\ScatteredSegmentContainer\BaseSegmentContainer.cs" />
+    <Compile Include="ObjectManagement\Integration\ScatteredSegmentContainer\ISegment.cs" />
+    <Compile Include="ObjectManagement\Integration\ScatteredSegmentContainer\ISegmentContainer.cs" />
+    <Compile Include="ObjectManagement\IObjectRetriever.cs" />
+    <Compile Include="ObjectManagement\Managers\GroupingObjectManager\GroupingObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\GroupingObjectManager\IGroupingObject.cs" />
+    <Compile Include="ObjectManagement\Managers\GroupingObjectManager\IGroupingObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\ObjectManager\IObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\ObjectManager\ObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\PriorityManager\IPriorityObject.cs" />
+    <Compile Include="ObjectManagement\Managers\PriorityManager\ISamePriorityObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\PriorityManager\PriorityManager.cs" />
+    <Compile Include="ObjectManagement\Managers\PriorityManager\SamePriorityObjectManager.cs" />
+    <Compile Include="ObjectManagement\Managers\RefreshableCacheManager\IRefreshableCache.cs" />
+    <Compile Include="ObjectManagement\Managers\RefreshableCacheManager\IRefreshableCacheManager.cs" />
+    <Compile Include="ObjectManagement\Managers\RefreshableCacheManager\RefreshableCacheExceptionLogBridge.cs" />
+    <Compile Include="ObjectManagement\Managers\RefreshableCacheManager\RefreshableCacheManager.cs" />
+    <Compile Include="ObjectManagement\Pool\DefaultPooledObjectCreator.cs" />
+    <Compile Include="ObjectManagement\Pool\IObjectPool.cs" />
+    <Compile Include="ObjectManagement\Pool\IPooledObjectCreator.cs" />
+    <Compile Include="ObjectManagement\Pool\ObjectPool.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Drawer\BinaryDrawer.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Drawer\IBinaryDrawer.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Heap\CompleteBinaryTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Heap\DoubleEndedHeap.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Heap\Heap.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Heap\IHeap.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Heap\MinMaxHeap.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\IBinaryTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\Node.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\SorttedBinaryTree\ISorttedBinaryTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Binary\SorttedBinaryTree\SorttedBinaryTree.cs" />
+    <Compile Include="ObjectManagement\Trees\KDimension\KDNode.cs" />
+    <Compile Include="ObjectManagement\Trees\KDimension\KDSearchScope.cs" />
+    <Compile Include="ObjectManagement\Trees\KDimension\KDTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\Agile\AgileMultiTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\Agile\IAgileMultiTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\Agile\IAgileNodePicker.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\IMTreeVal.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\IMultiTree.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\MNode.cs" />
+    <Compile Include="ObjectManagement\Trees\Multiple\MultiTree.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\Persistence\SimpleXmlConverter.cs" />
+    <Compile Include="Serialization\Persistence\SpringSchema\AgileConfiguration.cs" />
+    <Compile Include="Serialization\Persistence\SpringSchema\FieldCheckRequiredAttribute.cs" />
+    <Compile Include="Serialization\Persistence\SpringSchema\SpringFox.cs" />
+    <Compile Include="Threading\Application\AsynDelayActor.cs" />
+    <Compile Include="Threading\Application\CircleTaskSwitcher.cs" />
+    <Compile Include="Threading\Application\HeartBeatChecker.cs" />
+    <Compile Include="Threading\Application\ICircleTaskSwitcher.cs" />
+    <Compile Include="Threading\Application\IHeartBeatChecker.cs" />
+    <Compile Include="Threading\Application\IOnLineChecker.cs" />
+    <Compile Include="Threading\Application\OnLineChecker.cs" />
+    <Compile Include="Threading\Engines\AgileEngine.cs" />
+    <Compile Include="Threading\Engines\BaseEngineTache.cs" />
+    <Compile Include="Threading\Engines\CycleEngine\AgileCycleEngine.cs" />
+    <Compile Include="Threading\Engines\CycleEngine\BaseCycleEngine.cs" />
+    <Compile Include="Threading\Engines\CycleEngine\ICycleEngine.cs" />
+    <Compile Include="Threading\Engines\IAgileEngine.cs" />
+    <Compile Include="Threading\Engines\IEngineTache.cs" />
+    <Compile Include="Threading\Engines\IEngineTacheUtil.cs" />
+    <Compile Include="Threading\Engines\SequentialEngine\BaseEngineTache.cs" />
+    <Compile Include="Threading\Engines\SequentialEngine\IEngineTache.cs" />
+    <Compile Include="Threading\Engines\SequentialEngine\IEngineTacheUtil.cs" />
+    <Compile Include="Threading\Engines\SequentialEngine\ISequentialEngine.cs" />
+    <Compile Include="Threading\Engines\SequentialEngine\SequentialEngine.cs" />
+    <Compile Include="Threading\Engines\WorkerEngine\BriefWorkerEngine.cs" />
+    <Compile Include="Threading\Engines\WorkerEngine\IWorkerEngine.cs" />
+    <Compile Include="Threading\Engines\WorkerEngine\IWorkProcesser.cs" />
+    <Compile Include="Threading\Engines\WorkerEngine\WorkerEngine.cs" />
+    <Compile Include="Threading\Synchronize\LockingObject.cs" />
+    <Compile Include="Threading\Synchronize\SmartRWLocker.cs" />
+    <Compile Include="Threading\Timers\Callback\CallbackTask.cs" />
+    <Compile Include="Threading\Timers\Callback\CallbackTimer.cs" />
+    <Compile Include="Threading\Timers\Callback\ICallbackTimer.cs" />
+    <Compile Include="Threading\Timers\RichTimer\ITimerConfigure.cs" />
+    <Compile Include="Threading\Timers\RichTimer\ITimerTaskManager.cs" />
+    <Compile Include="Threading\Timers\RichTimer\RichTimerType.cs" />
+    <Compile Include="Threading\Timers\RichTimer\TimerConfiguration.cs" />
+    <Compile Include="Threading\Timers\RichTimer\TimerTask.cs" />
+    <Compile Include="Threading\Timers\RichTimer\TimerTaskManager.cs" />
+    <Compile Include="Threading\Timers\TimingTask\ITimingTaskExcuter.cs" />
+    <Compile Include="Threading\Timers\TimingTask\TimingTask.cs" />
+    <Compile Include="Threading\Timers\TimingTask\TimingTaskManager.cs" />
+    <Compile Include="Threading\Timers\TimingTask\TimingTaskType.cs" />
+    <Compile Include="Widget\AgileProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\AgileProgressBar.Designer.cs">
+      <DependentUpon>AgileProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\AgileRichTextBox\AgileRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\AgileRichTextBox\GifBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\AgileRichTextBox\IImagePathGetter.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\CHARRANGE.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\CLIPFORMAT.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\COMRECT.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\DVASPECT.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\FORMATETC.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\GETCLIPBOARDDATAFLAGS.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\GETOBJECTOPTIONS.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IAdviseSink.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IDataObject.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IEnumFORMATETC.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IEnumOLEVERB.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IEnumSTATDATA.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IEnumSTATSTG.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\ILockBytes.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IOleClientSite.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IOleContainer.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IOleObject.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IRichEditOle.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\ISequentialStream.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IStorge.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\IStream.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\NativeMethods.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\REOBJECT.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\REOOBJECTFLAGS.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\RichEditOle.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\STATDATA.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\STGM.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\STGMEDIUM.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\tagLOGPALETTE.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\tagOLEVERB.cs" />
+    <Compile Include="Widget\AgileRichTextBox\Internals\TYMED.cs" />
+    <Compile Include="Widget\CaptureScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Widget\CaptureScreenForm.Designer.cs">
+      <DependentUpon>CaptureScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\EnumComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\EnumComboBox.Designer.cs">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\ExListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\FaceEmotionBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\FaceEmotionBoard.Designer.cs">
+      <DependentUpon>FaceEmotionBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\FontColor\ColorChooser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\FontColor\ColorChooser.Designer.cs">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\RichTimerConfigure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\RichTimerConfigure.Designer.cs">
+      <DependentUpon>RichTimerConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\SystemIconShell.cs" />
+    <Compile Include="Widget\Thumbnail\Thumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Thumbnail\Thumbnail.Designer.cs">
+      <DependentUpon>Thumbnail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\Thumbnail\ThumbnailListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\Thumbnail\ThumbnailListBox.Designer.cs">
+      <DependentUpon>ThumbnailListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\TimerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\XDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget\XDataGridView.Designer.cs">
+      <DependentUpon>XDataGridView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Emit\DynamicProxy\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Widget\AgileProgressBar.resx">
+      <DependentUpon>AgileProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\CaptureScreenForm.resx">
+      <DependentUpon>CaptureScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\EnumComboBox.resx">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\ExListView.resx">
+      <DependentUpon>ExListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\FaceEmotionBoard.resx">
+      <DependentUpon>FaceEmotionBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\FontColor\ColorChooser.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\RichTimerConfigure.resx">
+      <DependentUpon>RichTimerConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Thumbnail\Thumbnail.resx">
+      <DependentUpon>Thumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\Thumbnail\ThumbnailListBox.resx">
+      <DependentUpon>ThumbnailListBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

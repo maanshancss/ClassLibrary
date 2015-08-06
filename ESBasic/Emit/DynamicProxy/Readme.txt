@@ -1,0 +1,7 @@
+﻿关于ESBasic.Emit.DynamicProxy空间的各动态代理的使用
+
+1. 如果是记录异常详细信息，可使用ExceptionFilterProxyEmitter 或 DynamicProxyFactory.CreateEFProxy。
+2. 如果是记录执行时间信息或自定义AOP截获，可使用SimpleAopProxyEmitter 或 DynamicProxyFactory.CreateSimpleAopProxy。
+3. 如果是简单地适配接口，则可使用SimpleProxyEmitter 或 DynamicProxyFactory.CreateSimpleAopProxy
+4. AopProxyEmitter 采用反射调用被截获的方法，性能会受到影响，不推荐使用，请采用SimpleAopProxyEmitter代替它。
+5. 发射的所有动态代理类型都继承了MarshalByRefObject。
